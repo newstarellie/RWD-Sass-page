@@ -1,0 +1,22 @@
+header {
+  background-image: url('https://upload.cc/i1/2022/06/14/YdiW61.png');
+  height: 420px;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+
+  nav {
+    background-color: black;
+    position: absolute;
+    z-index: 5;
+    display: flex;
+  }
+  .banner {
+    position: absolute;
+    z-index: 6;
+    width: 330px;
+    height: 300px;
+    background-color: #000000 35%;
+    opacity: 35%;
+  }
+}

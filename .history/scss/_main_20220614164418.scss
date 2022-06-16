@@ -1,0 +1,17 @@
+.header {
+  position: relative;
+  .banner {
+    background-image: url('https://upload.cc/i1/2022/06/14/YdiW61.png');
+    height: 420px;
+    position: absolute;
+    z-index: 0;
+
+    .filter {
+      background-color: #000000 35%;
+      margin: ;
+      h2 {
+        color: $text-color-lighter;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "favorites.resources": [
+    {
+      "filePath": "index.html",
+      "group": "Default"
+    },
+    {
+      "filePath": "scss\\_main.scss",
+      "group": "Default"
+    }
+  ]
+}

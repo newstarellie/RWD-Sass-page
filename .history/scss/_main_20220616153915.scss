@@ -1,0 +1,279 @@
+.store-feature {
+    padding: 50px 30px;
+    @include flex-column(start, start);
+    align-items: center;
+    background-color: $theme-color-background-light1;
+    color: $text-color-dark;
+    text-align: center;
+
+    &>div {
+        @include flex-row(start, start);
+        margin-bottom: 16px;
+    }
+
+    li {
+        @include flex-column(start, start);
+        align-items: center;
+        width: 260px;
+        padding: 15px 0;
+
+        h4 {
+            @include fontAndHeight(18px, 32px);
+            margin: 20px 0 11px 0;
+        }
+
+        p {
+            text-align: left;
+        }
+
+        div {
+            @include round-picture(200px, 200px, '');
+
+        }
+
+
+        &:nth-child(1) div {
+            background-image: url('../img/feature_1.png');
+
+        }
+
+        &:nth-child(2) div {
+            background-image: url('../img/feature_2.png');
+
+        }
+
+        &:nth-child(3) div {
+            background-image: url('../img/feature_3.png');
+
+        }
+
+    }
+
+
+
+    @include pad {
+        .deco-line {
+            width: 139px;
+            height: 1px;
+            border-bottom: 1px solid #979797;
+            align-self: center;
+            margin: 13px;
+        }
+
+        ul {
+            @include flex-row(start, start);
+
+            li {
+                margin: 0 30px;
+            }
+        }
+    }
+}
+
+.chef-intro {
+    background-color: $theme-color-background-deeper;
+    color: $theme-color-background-light1;
+
+    .chef-pic {
+        background-image: url('../img/main_chef_brown.png');
+        height: 460px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+    }
+
+    .chef-content {
+        padding: 30px;
+
+        h3 {
+            @include fontAndHeight(24px, 32px);
+        }
+
+        P {
+            color: $theme-color-background-light1;
+        }
+
+        p:nth-child(2) {
+            margin-bottom: 16px;
+        }
+    }
+
+    @include pad {
+        @include flex-row(center, start);
+
+
+        .chef-pic {
+            width: 470px;
+
+        }
+
+        .chef-content {
+            width: 410px;
+            padding: 0; //cover 原本的
+            @include flex-column(center, start);
+            margin: auto 25px;
+        }
+    }
+}
+
+.costumer-comment {
+    @include flex-column(start, center);
+    padding: 50px 10px;
+    background-color: $theme-color-background-light2;
+    color: $theme-color-background-deeper;
+
+    h2 {
+        @include fontAndHeight(24px, 32px);
+        margin-bottom: 32px;
+    }
+
+    .costumer-item {
+        @include flex-column(start, start);
+        width: 300px;
+
+        div:first-child {
+            @include flex-row(center, center);
+            margin-right: auto;
+
+            .costumer-pic {
+                @include round-picture(67px, 67px, "");
+            }
+
+            .costumer-id {
+                margin-left: 13px;
+                font-size: 18px;
+            }
+        }
+
+        div:nth-child(2) {
+            @include flex-column(start, start);
+            @include fontAndHeight(16px, 24px);
+            width: 220px;
+            margin-left: auto;
+
+            .costumer-occupation {
+                text-align: end;
+                margin-top: 16px;
+            }
+        }
+    }
+
+    @include pad {
+        &>div {
+            @include flex-row(start, start);
+        }
+    }
+
+
+}
+
+.information {
+    padding: 43px 15px 50px 15px;
+    @include flex-column(start, center);
+
+
+    h2 {
+        @include fontAndHeight(24px, 32px);
+        text-align: center;
+    }
+
+    &>div {
+        width: 100%;
+
+        #map {
+            width: 100%;
+            height: 386px;
+            background-color: #979797;
+        }
+
+        form {
+            @include flex-column(start, start);
+            width: 100%;
+
+            label {
+                @include fontAndHeight(14px, 20px);
+
+            }
+
+            input {
+                width: 100%;
+                padding: 5px 14px;
+                border-radius: 3px;
+                border: 1px solid #CCCCCC;
+                box-shadow: inset 0px 1px 0px 0px #ECECEC;
+                border-radius: 3px;
+                margin: 6px 0 12px 0;
+                @include fontAndHeight(16px, 22px);
+
+            }
+
+            input[type='submit'] {
+                display: inline;
+            }
+
+            .veg {
+                display: flex;
+
+                //TODO radio 消失了
+                div {
+                    display: flex;
+                    margin-right: 36px;
+                }
+            }
+
+            &>div:last-child {
+                margin-left: auto;
+                margin-top: 30px;
+
+                input[type="submit"] {
+                    width: 70px;
+                    height: 32px;
+                    @include fontAndHeight(14px, 20px);
+                    color: $text-color-light;
+
+                    &:nth-child(1) {
+                        background-color: #9b9796;
+                    }
+
+                    &:nth-child(2) {
+                        background-color: #F56C23;
+
+                    }
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+
+                    &:active {
+                        transform: scale(1);
+                        box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.2);
+                    }
+                }
+            }
+        }
+    }
+
+
+    @include pad {
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        &>div {
+            @include flex-row(space-between, start);
+
+            #map {
+                width: 460px;
+                background-color: #979797;
+                margin-left: 20px;
+            }
+
+            form {
+                width: 460px;
+            }
+
+        }
+    }
+}

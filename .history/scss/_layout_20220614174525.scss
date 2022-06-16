@@ -1,0 +1,110 @@
+header {
+  background-color: $theme-color-background-deepest;
+  position: relative;
+  height: 420px;
+  padding: 113px;
+  .container {
+    @include flex-column('', '');
+    nav {
+      padding: 17px 13px;
+    }
+    .header-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      width: 100%;
+      @include flex-row(space-between, center);
+
+      h1 {
+        a {
+          @include a-link-img($a-link-img-bright, 94px, 24px);
+        }
+      }
+      .show-menu {
+        display: flex;
+        & > a {
+          @include a-link-img($menu-btn-img, 24px, 24px);
+        }
+        ul {
+          display: none;
+        }
+      }
+      //todo 修改到container裡面
+      @include pad {
+        & > a {
+          display: none;
+        }
+        ul {
+          display: flex;
+        }
+        li > a {
+          @include a-link-btn;
+          &::hover {
+            background-color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $theme-color-background-lighter;
+  .container {
+    padding: 50px 11px;
+    p,
+    li {
+      font-size: 16px;
+    }
+
+    div:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    h2 {
+      margin-bottom: 16px;
+      font-size: $font-l32;
+      a {
+        @include a-link-img($a-link-img-dark, 245px, 49px);
+      }
+    }
+
+    .footer-link {
+      @include flex-column(start, flex-end);
+
+      ul {
+        li {
+          display: inline-block;
+        }
+        li:nth-child(1) a {
+          @include a-link-img($a-link-img-google, 36px, 31px);
+        }
+        li:nth-child(2) a {
+          @include a-link-img($a-link-img-twitter, 36px, 31px);
+        }
+        li:nth-child(3) a {
+          @include a-link-img($a-link-img-FB, 36px, 31px);
+        }
+      }
+    }
+
+    @include pad {
+      @include flex-row(start, '');
+      padding: 50px 43px;
+      flex-grow: 1;
+
+      h2 {
+        font-size: $font-m24;
+      }
+      div:not(:last-child) {
+        width: 300px;
+        margin-right: 21px;
+        margin-bottom: 0px;
+      }
+
+      .footer-link {
+        margin-left: auto;
+      }
+    }
+  }
+}

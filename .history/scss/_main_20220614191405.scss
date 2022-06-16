@@ -1,0 +1,21 @@
+.store-feature {
+    display: flex;
+    flex-direction: column;
+    background-color: $theme-color-background-lighter;
+    color: $text-color-dark;
+    text-align: center;
+
+    &>div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .deco-line {
+        border-bottom: 1px solid $text-color-dark;
+
+    }
+
+    p {
+        text-align: left;
+    }
+}

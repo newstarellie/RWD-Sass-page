@@ -1,0 +1,60 @@
+// media size
+$mobile-size: 340px;
+$pad-size: 768px;
+$screen-size: 992px;
+$screen-max-width: 1024px;
+//font
+$font-s16: 16px;
+$font-m24: 24px;
+$font-l32: 32px;
+$font-xl40: 40px;
+
+//for  font-s(14~22px)
+@for $i from 0 through 4 {
+  .font-s#{14 + $i*2} {
+    font-size: 14 + 2 * $i + px;
+  }
+}
+
+//line-height
+$line-height-s: 1.5rem;
+$line-height-m: 2rem;
+$line-height-l: 2.5rem;
+$line-height-xl: 3rem;
+//color
+$theme-color-main: #b2998e;
+$theme-color-second: #dcc6c6;
+
+//theme-color-background
+$theme-color-background-lightest: #f6f4f3;
+$theme-color-background-lighter: #efe9e7;
+//$theme-color-background-light: #e1e0e7;
+//$theme-color-background-deep: #e1e0e7;
+$theme-color-background-deeper: #3d1101;
+$theme-color-background-deepest: #050000;
+
+//text color
+$text-color-dark: #3d1101;
+$text-color-light: #efe9e7;
+$text-color-lighter: #ffffff;
+
+$border-color: #854e4b;
+$table-color: #f6ded4;
+
+//btn
+$btn-text-color: #e1e0e7;
+$btn-background-color: $theme-color-background-deepest;
+$btn-hover-color: $theme-color-background-lighter;
+
+//margin
+$margin-s: 0.5rem;
+$margin-m: 1rem;
+$margin-l: 1.5rem;
+$margin-xl: 2rem;
+//pic
+$a-link-img-bright: "https://svgur.com/i/iAi.svg";
+$a-link-img-dark: "https://svgur.com/i/iA5.svg";
+$a-link-img-FB: "https://upload.cc/i1/2022/06/09/Cgds7B.png";
+$a-link-img-twitter: "https://upload.cc/i1/2022/06/09/sjZ0nQ.png";
+$a-link-img-google: "https://upload.cc/i1/2022/06/09/qHKA0X.png";
+$menu-btn-img: "https://upload.cc/i1/2022/06/09/h5UCR1.png";

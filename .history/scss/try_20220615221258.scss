@@ -1,0 +1,17 @@
+@for $var from 1 to 3 {}
+
+@for $i from 0 through 4 {
+    .#{14 + $i*2} {
+        font-size: 14 + 2 * $i + px;
+    }
+}
+
+$direction-types: center, start, end;
+
+@each $type in $direction-types {
+    .flex-#{$type} {
+        display: flex;
+        justify-content: $type;
+        align-items: center;
+    }
+}

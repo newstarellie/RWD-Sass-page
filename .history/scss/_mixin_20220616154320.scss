@@ -1,0 +1,135 @@
+//media
+@mixin mobile {
+  @media (min-width: $mobile-size) {
+    @content;
+  }
+}
+
+@mixin pad {
+  @media (min-width: $pad-size) {
+    @content;
+  }
+}
+
+@mixin screen {
+  @media (min-width: $screen-size) {
+    @content;
+  }
+}
+
+// font +line height 
+@mixin fontAndHeight($font, $height) {
+  font-size: $font;
+  line-height: $height;
+}
+
+//<a>btn
+@mixin a-link-btn {
+  display: block;
+  padding: 0.5rem;
+  background-color: $btn-background-color;
+  border: $btn-background-color solid 1px;
+  border-radius: 5%;
+  text-decoration: none;
+  color: $text-color-light;
+  text-align: center;
+  font-weight: bold;
+
+  &:hover {
+    //background-color: $btn-hover-color;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(1);
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+
+//logo with img
+@mixin a-link-img($logo-img, $width, $hight) {
+  background-image: url($logo-img);
+  display: block;
+  width: $width;
+  height: $hight;
+  text-indent: -1000px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(1);
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+//flex
+@mixin flex-row($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin flex-column($justify-content, $align-items) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+//flex class
+$direction-types: center, start, end, space-between, space-around, space-evenly;
+
+@each $type in $direction-types {
+  .flex-row-#{$type} {
+    display: flex;
+    justify-content: $type;
+    align-items: center;
+  }
+
+  .flex-column-#{$type} {
+    display: flex;
+    flex-direction: column;
+    justify-content: $type;
+    align-items: center;
+  }
+}
+
+// list item
+@mixin list-item-disc {
+  display: list-item;
+  list-style: disc;
+  list-style-position: inside;
+}
+
+//round picture
+@mixin round-picture($width, $height, $picUrl) {
+  border-radius: 50%;
+  width: $width ;
+  height: $height ;
+  background-size: contain;
+  background-image: url($picUrl);
+}
+
+//input 
+@mixin input($width, ) {
+  width: $width;
+  padding: 5px 14px;
+  border-radius: 3px;
+  border: 1px solid #CCCCCC;
+  box-shadow: inset 0px 1px 0px 0px #ECECEC;
+  border-radius: 3px;
+  margin: 6px 0 12px 0;
+
+  &:focus {
+    border: 1px solid $theme-color-background-deeper;
+  }
+}

@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.clear-fix {
+  clear: both;
+}
+
+body {
+  background-color: $theme-color-background-light1;
+  font-family: '微軟正黑體';
+}
+
+.wrap {
+  margin: 0 auto;
+}
+
+.container {
+  max-width: $screen-max-width;
+  margin: 0 auto;
+}
+
+// component
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+p {
+  @include fontAndHeight(16px, 24px);
+}
+
+h1,
+h2,
+h3,
+h4,
+div,
+p {
+  color: $theme-color-background-deeper;
+}

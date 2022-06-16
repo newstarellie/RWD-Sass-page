@@ -1,0 +1,266 @@
+.store-feature {
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $theme-color-background-light1;
+    color: $text-color-dark;
+    text-align: center;
+
+    &>div {
+        display: flex;
+        margin-bottom: 16px;
+
+
+    }
+
+    li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 260px;
+        padding: 15px 0;
+
+        h4 {
+            font-size: 18px;
+            line-height: 32px;
+            margin: 20px 0 11px 0;
+        }
+
+        div {
+            @include round-picture(200px, 200px, '');
+
+        }
+
+
+
+        &:nth-child(1) div {
+            background-image: url('../img/feature_1.png');
+
+        }
+
+        &:nth-child(2) div {
+            background-image: url('../img/feature_2.png');
+
+        }
+
+        &:nth-child(3) div {
+            background-image: url('../img/feature_3.png');
+
+        }
+
+    }
+
+    p {
+        text-align: left;
+    }
+
+    @include pad {
+        .deco-line {
+            width: 139px;
+            height: 1px;
+            border-bottom: 1px solid #979797;
+            align-self: center;
+            margin: 13px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+
+            li {
+                margin: 0 30px;
+            }
+        }
+    }
+}
+
+.chef-intro {
+    background-color: $theme-color-background-deeper;
+    color: $theme-color-background-light1;
+
+    .chef-pic {
+        background-image: url('../img/main_chef_brown.png');
+        height: 460px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+    }
+
+    .chef-content {
+        padding: 30px;
+
+        h3 {
+            line-height: 32px;
+            font-size: 24px;
+
+        }
+
+        P {
+            color: $theme-color-background-light1;
+        }
+
+        p:nth-child(2) {
+            margin-bottom: 16px;
+        }
+    }
+
+    @include pad {
+        display: flex;
+        justify-content: center;
+
+        .chef-pic {
+            width: 470px;
+
+        }
+
+        .chef-content {
+            width: 410px;
+            padding: 0;
+            margin-left: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+
+.costumer-comment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 10px;
+    background-color: $theme-color-background-light2;
+    color: $theme-color-background-deeper;
+
+    h2 {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 32px;
+    }
+
+    .costumer-item {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        width: 300px;
+
+        div:first-child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: auto;
+
+            .costumer-pic {
+                @include round-picture(67px, 67px, "");
+            }
+
+            .costumer-id {
+                margin-left: 13px;
+                font-size: 18px;
+
+
+            }
+        }
+
+        div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            width: 220px;
+            margin-left: auto;
+            font-size: 16px;
+            line-height: 24px;
+
+
+            .costumer-occupation {
+                display: inline-block;
+                text-align: end;
+                margin-top: 16px;
+            }
+        }
+    }
+
+    @include pad {
+        &>div {
+            display: flex;
+        }
+    }
+
+
+}
+
+.information {
+    padding: 43px 15px 50px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+
+    #map {
+        width: 100%;
+        height: 386px;
+        background-color: #979797;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        label {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 5px 14px;
+            border-radius: 3px;
+            border: 1px solid #CCCCCC;
+            box-shadow: inset 0px 1px 0px 0px #ECECEC;
+            border-radius: 3px;
+            margin: 6px 0 12px 0;
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        .veg {
+            display: flex;
+            flex-grow: 1;
+
+            div {
+                margin-right: 36px;
+            }
+        }
+
+
+    }
+
+
+    @include pad {
+
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        &>div {
+
+
+
+            #map {
+                width: 460px;
+                background-color: #979797;
+                margin-left: 20px;
+            }
+        }
+    }
+}

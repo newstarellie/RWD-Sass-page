@@ -1,0 +1,129 @@
+.store-feature {
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $theme-color-background-lighter;
+    color: $text-color-dark;
+    text-align: center;
+
+    &>div {
+        display: flex;
+        margin-bottom: 16px;
+
+        .deco-line {
+            display: none;
+            width: 139px;
+            height: 1px;
+            border-bottom: 1px solid #979797;
+            align-self: center;
+            margin: 13px;
+        }
+    }
+
+    li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 260px;
+        padding: 15px 0;
+
+        h4 {
+            font-size: 18px;
+            line-height: 32px;
+            margin: 20px 0 11px 0;
+        }
+
+        div {
+            @include round-picture(200px, 200px, '');
+
+        }
+
+
+
+        &:nth-child(1) div {
+            background-image: url('../img/feature_1.png');
+
+        }
+
+        &:nth-child(2) div {
+            background-image: url('../img/feature_2.png');
+
+        }
+
+        &:nth-child(3) div {
+            background-image: url('../img/feature_3.png');
+
+        }
+
+    }
+
+
+
+    p {
+        text-align: left;
+    }
+}
+
+.chef-intro {
+    background-color: $theme-color-background-deeper;
+    color: $theme-color-background-lighter;
+
+    .chef-pic {
+        background-image: url('../img/main_chef_brown.png');
+        height: 460px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    .chef-content {
+        padding: 30px;
+
+        h3 {
+            line-height: 32px;
+            font-size: 24px;
+
+        }
+
+        p:nth-child(2) {
+            margin-bottom: 16px;
+        }
+
+
+    }
+
+}
+
+.costumer-comment {
+    display: flex;
+    flex-direction: column;
+
+    .costumer-item {
+        display: flex;
+        //RWD 
+        flex-direction: column;
+
+        div:first-child {
+            display: flex;
+
+            .costumer-pic {
+                @include round-picture(67px, 67px);
+            }
+
+            &:nth-child(1) .costumer-pic {
+                background-image: url('../img/costumer-pic/avatar_1@2x.png');
+            }
+        }
+
+
+
+
+
+
+    }
+
+
+
+}

@@ -1,0 +1,141 @@
+.try {
+  background-image: url('../header_mobile.png');
+  width: 500px;
+  height: 500px;
+}
+
+header {
+  background-image: url('https: //upload.cc/i1/2022/06/14/YdiW61.png');
+  width: 500px;
+  height: 420px;
+
+  .container {
+    @include flex-column('', '');
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+
+      h1 {
+        a {
+          @include a-link-img($a-link-img-bright, 94px, 24px);
+        }
+      }
+
+      &>div {
+        a {
+          @include a-link-img($menu-btn-img, 24px, 24px);
+        }
+
+        .show-menu {
+          display: none;
+        }
+      }
+    }
+
+    .filter {
+      width: 80%;
+      height: 80%;
+      background-color: aqua;
+      margin: auto auto;
+      opacity: 0.5;
+      position: absolute;
+      z-index: 1;
+
+      h2 {}
+    }
+
+  }
+
+  //todo 修改到container裡面
+  @include pad {
+    nav {
+      div>a {
+        display: none;
+      }
+
+      ul {
+        display: flex;
+
+        li>a {
+          @include a-link-btn;
+
+          &:hover {
+            background-color: black;
+          }
+        }
+      }
+    }
+
+    .filter {}
+  }
+}
+
+
+footer {
+  background-color: $theme-color-background-lighter;
+
+  .container {
+    padding: 50px 11px;
+
+    p,
+    li {
+      font-size: 16px;
+    }
+
+    div:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      margin-bottom: 16px;
+      font-size: $font-l32;
+
+      a {
+        @include a-link-img($a-link-img-dark, 245px, 49px);
+      }
+    }
+
+    .footer-link {
+      @include flex-column(start, flex-end);
+
+      ul {
+        li {
+          display: inline-block;
+        }
+
+        li:nth-child(1) a {
+          @include a-link-img($a-link-img-google, 36px, 31px);
+        }
+
+        li:nth-child(2) a {
+          @include a-link-img($a-link-img-twitter, 36px, 31px);
+        }
+
+        li:nth-child(3) a {
+          @include a-link-img($a-link-img-FB, 36px, 31px);
+        }
+      }
+    }
+
+    @include pad {
+      @include flex-row(start, '');
+      padding: 50px 43px;
+      flex-grow: 1;
+
+      h2 {
+        font-size: $font-m24;
+      }
+
+      div:not(:last-child) {
+        width: 300px;
+        margin-right: 21px;
+        margin-bottom: 0px;
+      }
+
+      .footer-link {
+        margin-left: auto;
+      }
+    }
+  }
+}
